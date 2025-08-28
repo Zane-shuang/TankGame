@@ -91,7 +91,7 @@ public class MyPanel extends JPanel implements KeyListener,Runnable {
         Recorder.setEnemyTanks(enemyTanks);
 
         //添加音乐
-        //new AePlayWave("src\\Lorelei.wav").start();
+        new AePlayWave("src\\music.wav").start();
     }
 
     public void showInfo(Graphics g){
@@ -153,6 +153,9 @@ public class MyPanel extends JPanel implements KeyListener,Runnable {
 
         //如果Vector<> bombs 里有对象，就画出爆炸
         for (int i = 0; i < bombs.size(); i++) {
+            //爆炸音乐
+            //new AePlayWave("src\\bomb.wav").start();
+
             Bomb bomb = bombs.get(i);
             if(bomb.life > 6){
                 g.drawImage(image1, bomb.x, bomb.y, 60,60,this);
